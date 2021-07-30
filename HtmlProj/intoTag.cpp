@@ -1,40 +1,46 @@
 #include "intoTag.h"
 
-string intoTag(char userChoice, string content, string desc) {
+string intoTag(char userChoice, string content, string desc)
+{
 	switch (userChoice)
 	{
-	case 'T'://to add a title tag
+	case 'T': //to add a title tag
 		return "<title>" + content + "</title>";
 		break;
-	case 'S'://For making text bold
+	case 'S': //For making text bold
 		return "<strong>" + content + "</strong>";
 		break;
-	case 'P'://Adding the paragraph tag
+	case 'P': //Adding the paragraph tag
 		return "<p>" + content + "</p>";
 		break;
-	case 'X'://Creating a link with optional desciption tag
+	case 'X': //Creating a link with optional desciption tag
 		return "<a href=" + content + ">" + desc + "</a>";
 		break;
-	case 'C'://Allow user to add comments to the html file
+	case 'C': //Allow user to add comments to the html file
 		return "<!--" + content + "-->";
 		break;
-	case 'H'://Header with optional desc tag to change header size
+	case 'H': //Header with optional desc tag to change header size
 		return "<h" + desc + ">" + content + "</h" + desc + ">";
 		break;
-	case 'I'://For allowing user to add images to the html page
+	case 'I': //For allowing user to add images to the html page
 		return "<a href=" + content + ">" + desc + "</a>";
 		break;
-	case 'E'://Emphasises text
+	case 'E': //Emphasises text
 		return "<em>" + content + "</em>";
 		break;
-	case 'D'://Allows users to make a div
+	case 'D': //Allows users to make a div
 		return "<div class=" + content + ">" + desc + "</div>";
 		break;
-	case 'R'://For allowing to make a horizontal break
+	case 'R': //For allowing to make a horizontal break
 		return "<hr>";
 		break;
 	default:
 		return "";
 		break;
 	}
+
+	// Need break element <br> represented by B
+	// Need ordered list and list element <ol><li></li><o/l> represented by O
+	// Needs optional desc for header tags since they're numbers
+	// Might need optional desc for image (I), emphasis(E), div (D),  and achor tags with links (X)
 }

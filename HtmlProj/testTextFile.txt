@@ -1,0 +1,17 @@
+*T
+This is our page title
+
+*P
+Some random paragraph idk
+
+*S
+This is strong
+
+*C
+This is a comment
+
+*X
+https://www.google.com/
+
+*H
+This is a heading tag

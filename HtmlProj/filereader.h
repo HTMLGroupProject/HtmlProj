@@ -11,8 +11,14 @@ class FileReader
 public:
     FileReader();
     vector<QString> readLines();
-    vector<QString> content;
-    vector<QString> getContent();
+    //    vector<QString> content;
+    //    vector<QString> getContent();
+
+    //returns the tags extracted from the file
+    vector<char *> returnTags(vector<QString> dataFromFile);
+
+    //returns the content extracted from the file
+    vector<string> returnContent(vector<QString> dataFromFile);
 };
 
 #endif // FILEREADER_H
